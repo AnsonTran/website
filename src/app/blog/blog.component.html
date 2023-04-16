@@ -1,32 +1,13 @@
 <main class="block pt-8">
   <div class="max-w-screen-2xl mx-auto px-4">
-    <h2 class="font-bold text-3xl py-2">Course Topics</h2>
+    <h2 class="font-bold text-3xl py-2 mb-6">Course Topics</h2>
     <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-
-      <div class="flex flex-col shadow-lg border rounded-lg">
-        <img src="https://www.w3schools.com/howto/img_avatar.png" class="rounded-t-lg">
-        <div class="mx-4 my-3">
-          <h3 class="font-semibold text-xl">Algorithms</h3>
-          <p class="font-light">This is course notes about algorithms</p>
-        </div>
-      </div>
-
-      <div class="flex flex-col shadow-lg border rounded-lg">
-        <img src="https://www.w3schools.com/howto/img_avatar.png" class="rounded-t-lg">
-        <div class="mx-4 my-3">
-          <h3 class="font-semibold text-xl">Algorithms</h3>
-          <p class="font-light">This is course notes about algorithms</p>
-        </div>
-      </div>
-
-      <div class="flex flex-col shadow-lg border rounded-lg">
-        <img src="https://www.w3schools.com/howto/img_avatar.png" class="rounded-t-lg">
-        <div class="mx-4 my-3">
-          <h3 class="font-semibold text-xl">Algorithms</h3>
-          <p class="font-light">This is course notes about algorithms</p>
-        </div>
-      </div>
-
+      <app-card
+        *ngFor="let course of courses"
+        [title]="course.title"
+        [description]="course.description"
+        [image]="course.image"
+      ></app-card>
     </div>
   </div>
 </main>
