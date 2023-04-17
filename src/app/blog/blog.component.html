@@ -7,6 +7,8 @@
         [title]="course.title"
         [description]="course.description"
         [image]="course.image"
+        class="cursor-pointer"
+        (click)="selectCourse(course.id)"
       ></app-card>
     </div>
   </div>

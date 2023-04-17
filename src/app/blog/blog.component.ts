@@ -7,13 +7,19 @@ import { Component } from '@angular/core';
 })
 export class BlogComponent {
   courses = [
-    { title: "Algorithm Design and Analysis",
+    { id: "CSCC73",
+      title: "Algorithm Design and Analysis",
       description: "An introduction to the main algorithmic paradigms. Greedy, divide-and-conquer, and dynamic programming",
       image: "https://images8.alphacoders.com/130/1309407.jpg"
     },
-    { title: "Operating Systems",
+    { id: "CSCC69",
+      title: "Operating Systems",
       description: "Test",
-      image: "https://images8.alphacoders.com/130/1309407.jpg"
+      image: "https://images5.alphacoders.com/131/1311254.png"
     },
   ]
+
+  selectCourse(id:String) {
+    console.log(id);
+  }
 }
