@@ -7,10 +7,13 @@ import { Component } from '@angular/core';
 })
 export class BlogComponent {
   courses = [
-    { title: "Algorithms", description: "Test", image: "https://images8.alphacoders.com/130/1309407.jpg" },
-    { title: "Algorithms", description: "Test", image: "https://images8.alphacoders.com/130/1309407.jpg" },
-    { title: "Algorithms", description: "Test", image: "https://images8.alphacoders.com/130/1309407.jpg" },
-    { title: "Algorithms", description: "Test", image: "https://images8.alphacoders.com/130/1309407.jpg" },
+    { title: "Algorithm Design and Analysis",
+      description: "An introduction to the main algorithmic paradigms. Greedy, divide-and-conquer, and dynamic programming",
+      image: "https://images8.alphacoders.com/130/1309407.jpg"
+    },
+    { title: "Operating Systems",
+      description: "Test",
+      image: "https://images8.alphacoders.com/130/1309407.jpg"
+    },
   ]
-
 }
