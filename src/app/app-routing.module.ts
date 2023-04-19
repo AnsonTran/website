@@ -6,11 +6,24 @@ import { ProjectsComponent } from './projects/projects.component';
 import { BlogComponent } from './blog/blog.component';
 import { HomeComponent } from './home/home.component';
 
+import { Course, COURSES } from 'notes/index';
+
+function coursePath(course:Course) {
+  return {
+    path: course.id,
+    component: BlogComponent
+  }
+}
+
 const routes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'about', component: AboutComponent },
   { path: 'projects', component: ProjectsComponent },
-  { path: 'blog', component: BlogComponent }
+  { path: 'blog',
+    component: BlogComponent,
+    children: COURSES.map((course:Course) =>
+      ({ path: course.id, component: BlogComponent }))
+  }
 ];
 
 @NgModule({
