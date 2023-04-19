@@ -8,13 +8,6 @@ import { HomeComponent } from './home/home.component';
 
 import { Course, COURSES } from 'notes/index';
 
-function coursePath(course:Course) {
-  return {
-    path: course.id,
-    component: BlogComponent
-  }
-}
-
 const routes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'about', component: AboutComponent },
