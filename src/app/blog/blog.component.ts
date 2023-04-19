@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { Course, COURSES } from 'notes/index';
 
@@ -10,21 +8,13 @@ import { Course, COURSES } from 'notes/index';
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.scss']
 })
-export class BlogComponent implements OnInit {
+export class BlogComponent {
   courses:Course[] = COURSES
   course!:string;
 
-  constructor(private route: ActivatedRoute) {
-  }
-
-  ngOnInit() {
-    this.route.queryParams.subscribe(params => {
-      this.course = params['course'];
-    });
-  }
+  constructor(private route: ActivatedRoute, private router: Router ) {}
 
   selectCourse(id:String) {
-    console.log(id);
-    console.log(COURSES);
+    this.router.navigate(['notes', id])
   }
 }
