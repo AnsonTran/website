@@ -1,2 +1,8 @@
-
-<p>viewer works!</p>
+<main class="block pt-16">
+  <markdown
+    [src]="'notes/CSCC69/01-Introduction.md'"
+    (load)="onLoad($event)"
+    (error)="onError($event)">
+  </markdown>
+  <p>viewer works!</p>
+</main>

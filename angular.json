@@ -30,7 +30,8 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              { "glob": "**/*.md", "input": "notes/", "output": "/notes"}
             ],
             "styles": [
               "src/styles.scss"

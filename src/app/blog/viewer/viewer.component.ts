@@ -8,5 +8,11 @@ import { Course, COURSES } from 'notes';
 })
 export class ViewerComponent {
 
+  onLoad(event:any) {
+    console.log(event)
+  }
 
+  onError(event:any){
+    console.log(event)
+  }
 }

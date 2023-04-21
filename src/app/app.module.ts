@@ -17,6 +17,7 @@ import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from 'src/shared/components/navbar/navbar.component';
 import { CardComponent } from 'src/shared/components/card/card.component';
 import { ViewerComponent } from './blog/viewer/viewer.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ViewerComponent } from './blog/viewer/viewer.component';
     ViewerComponent,
   ],
   imports: [
-    MarkdownModule.forRoot(),
+    HttpClientModule,
+    MarkdownModule.forRoot({ loader: HttpClient }),
     BrowserModule,
     AppRoutingModule
   ],
