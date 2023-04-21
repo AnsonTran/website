@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { Course, COURSES } from 'notes/index';
+import { Course, COURSES } from 'notes';
 
 @Component({
   selector: 'app-blog',
@@ -10,11 +10,10 @@ import { Course, COURSES } from 'notes/index';
 })
 export class BlogComponent {
   courses:Course[] = COURSES
-  course!:string;
 
   constructor(private route: ActivatedRoute, private router: Router ) {}
 
   selectCourse(id:String) {
-    this.router.navigate(['notes', id])
+    this.router.navigate([id], { relativeTo: this.route })
   }
 }
