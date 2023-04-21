@@ -5,20 +5,16 @@ import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { BlogComponent } from './blog/blog.component';
 import { HomeComponent } from './home/home.component';
-import { NotesComponent } from './notes/notes.component';
-import { NotesMarkdownComponent } from './notes/notes-markdown/notes-markdown.component';
+import { ViewerComponent } from './blog/viewer/viewer.component';
 
-import { Course, COURSES } from 'notes/index';
+import { Course, COURSES } from 'notes';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'about', component: AboutComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'blog', component: BlogComponent },
-  { path: 'notes',
-    component: NotesComponent,
-    children: COURSES.map((course:Course) => ({ path: course.id, component: NotesMarkdownComponent}))
-  }
+  { path: 'blog/:id', component: ViewerComponent }
 ];
 
 @NgModule({

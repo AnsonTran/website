@@ -16,8 +16,7 @@ import { AboutComponent } from './about/about.component';
 // Shared components
 import { NavbarComponent } from 'src/shared/components/navbar/navbar.component';
 import { CardComponent } from 'src/shared/components/card/card.component';
-import { NotesComponent } from './notes/notes.component';
-import { NotesMarkdownComponent } from './notes/notes-markdown/notes-markdown.component';
+import { ViewerComponent } from './blog/viewer/viewer.component';
 
 @NgModule({
   declarations: [
@@ -29,8 +28,7 @@ import { NotesMarkdownComponent } from './notes/notes-markdown/notes-markdown.co
     AboutComponent,
     NavbarComponent,
     CardComponent,
-    NotesComponent,
-    NotesMarkdownComponent,
+    ViewerComponent,
   ],
   imports: [
     MarkdownModule.forRoot(),
