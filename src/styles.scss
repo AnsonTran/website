@@ -2,3 +2,26 @@
 @use 'tailwindcss/base';
 @use 'tailwindcss/components';
 @use 'tailwindcss/utilities';
+
+@layer base {
+  h1 {
+    @apply text-2xl font-extrabold md:text-4xl;
+  }
+
+  h2 {
+    @apply text-xl font-extrabold md:text-3xl;
+  }
+
+  h3 {
+    @apply text-lg font-extrabold md:text-2xl;
+  }
+
+  h4 {
+    @apply text-base font-extrabold md:text-lg;
+  }
+
+  body {
+    @apply text-sm md:text-base;
+  }
+
+}
