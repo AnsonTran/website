@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const { fontFamily } = require('tailwindcss/defaultTheme');
+
 module.exports = {
   content: {
     relative: true,
@@ -9,7 +11,11 @@ module.exports = {
     ],
   },
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        primary: ['Inter', ...fontFamily.sans],
+      },
+    },
   },
   plugins: [],
 }
