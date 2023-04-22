@@ -1,15 +1,13 @@
-<main class="block pt-16">
-  <div class="flex flex-col max-w-screen-2xl mx-auto px-4">
-    <h2 class="font-sans font-extrabold text-5xl py-2 mb-6 mx-auto md:mx-0">Course Topics</h2>
-    <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      <app-card
-        *ngFor="let course of courses"
-        [title]="course.title"
-        [description]="course.description"
-        [image]="course.image"
-        class="cursor-pointer [&>*]:h-full"
-        (click)="selectCourse(course.id)"
-      ></app-card>
-    </div>
+<main class="layout flex flex-col">
+  <h1 class="font-extrabold pt-16 py-8 mx-auto md:mx-0">Course Topics</h1>
+  <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <app-card
+      *ngFor="let course of courses"
+      [title]="course.title"
+      [description]="course.description"
+      [image]="course.image"
+      class="cursor-pointer [&>*]:h-full"
+      (click)="selectCourse(course.id)"
+    ></app-card>
   </div>
 </main>
