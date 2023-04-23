@@ -1,4 +1,4 @@
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 import { Component, OnInit } from '@angular/core';
 import { MarkdownService } from 'ngx-markdown';
@@ -14,11 +14,19 @@ export class ViewerComponent implements OnInit {
   page!: string;
   path!: string;
 
-  constructor(private route: ActivatedRoute, private markdownService:MarkdownService) {
+  constructor(private router:Router, private route: ActivatedRoute, private markdownService:MarkdownService) {
     this.route.params.subscribe((param: Params) => {
-      this.course = COURSES.find((element) => element.id === param['course']) || COURSES[0]; // TODO: Proper error handling
+      let findCourse: Course|undefined = COURSES.find((element) => element.id === param['course']);
+      if (!findCourse) this.router.navigate(['blog']);
+      else this.course = findCourse;
+
       this.page = param['page'];
-      if (this.course) this.path = 'notes/' + this.course.id + '/' + this.page;
+
+      let findPage: string|undefined = this.course.files.find((element) => element === param['page']);
+      if (!findPage) this.router.navigate(['blog']);
+      else this.page = findPage;
+
+      this.path = 'notes/' + this.course.id + '/' + this.page;
     });
   }
 
