@@ -31,7 +31,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              { "glob": "**/*.md", "input": "notes/", "output": "/notes"}
+              { "glob": "**/*.{md|png}", "input": "notes/", "output": "/notes"}
             ],
             "styles": [
               "src/styles.scss"
