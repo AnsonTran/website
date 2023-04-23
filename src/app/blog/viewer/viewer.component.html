@@ -1,4 +1,11 @@
 <main class="layout">
+  <nav>
+    <ul>
+      <li *ngFor="let file of course.files">
+        <a routerLink="../{{file}}">{{file}}</a>
+      </li>
+    </ul>
+  </nav>
   <div class="py-16">
     <markdown
       [src]="path"
