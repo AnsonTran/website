@@ -18,6 +18,7 @@ import { NavbarComponent } from 'src/shared/components/navbar/navbar.component';
 import { CardComponent } from 'src/shared/components/card/card.component';
 import { ViewerComponent } from './blog/viewer/viewer.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { LoaderComponent } from './blog/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     CardComponent,
     ViewerComponent,
+    LoaderComponent,
   ],
   imports: [
     HttpClientModule,

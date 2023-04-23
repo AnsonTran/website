@@ -1,7 +1,9 @@
 <main class="layout">
-  <markdown
-    [src]="'notes/CSCC69/01-Introduction.md'"
-    (load)="onLoad($event)"
-    (error)="onError($event)">
-  </markdown>
+  <div class="py-16">
+    <markdown
+      [src]="path"
+      (load)="onLoad($event)"
+      (error)="onError($event)">
+    </markdown>
+  </div>
 </main>

@@ -1,5 +1,6 @@
+import { ActivatedRoute, Params } from '@angular/router';
+
 import { Component } from '@angular/core';
-import { Course, COURSES } from 'notes';
 
 @Component({
   selector: 'app-viewer',
@@ -7,12 +8,21 @@ import { Course, COURSES } from 'notes';
   styleUrls: ['./viewer.component.scss']
 })
 export class ViewerComponent {
+  private course!: String;
+  private page!: String;
+  path!: string;
+
+  constructor(private route: ActivatedRoute) {
+    this.route.params.subscribe((param: Params) => {
+      this.course = param['course'];
+      this.page = param['page'];
+    });
+    this.path = 'notes/' + this.course + '/' + this.page;
+  }
 
   onLoad(event:any) {
-    console.log(event)
   }
 
   onError(event:any){
-    console.log(event)
   }
 }
