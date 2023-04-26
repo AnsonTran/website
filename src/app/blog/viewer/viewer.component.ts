@@ -20,8 +20,6 @@ export class ViewerComponent implements OnInit {
       if (!findCourse) this.router.navigate(['blog']);
       else this.course = findCourse;
 
-      this.page = param['page'];
-
       let findPage: string|undefined = this.course.files.find((element) => element === param['page']);
       if (!findPage) this.router.navigate(['blog']);
       else this.page = findPage;

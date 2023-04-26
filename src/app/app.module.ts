@@ -4,8 +4,8 @@ import { MarkdownModule } from 'ngx-markdown';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
-import { HeaderComponent } from './home/header/header.component';
 
 // Pages
 import { HomeComponent } from './home/home.component';
@@ -13,11 +13,15 @@ import { ProjectsComponent } from './projects/projects.component';
 import { BlogComponent } from './blog/blog.component';
 import { AboutComponent } from './about/about.component';
 
-// Shared components
+// Shared Components
 import { NavbarComponent } from 'src/shared/components/navbar/navbar.component';
+import { SideNavbarComponent } from 'src/shared/components/side-navbar/side-navbar.component';
 import { CardComponent } from 'src/shared/components/card/card.component';
+import { HamburgerButtonComponent } from 'src/shared/components/hamburger-button/hamburger-button.component';
+
+// Components
+import { HeaderComponent } from './home/header/header.component';
 import { ViewerComponent } from './blog/viewer/viewer.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { LoaderComponent } from './blog/loader/loader.component';
 
 @NgModule({
@@ -29,9 +33,11 @@ import { LoaderComponent } from './blog/loader/loader.component';
     BlogComponent,
     AboutComponent,
     NavbarComponent,
+    SideNavbarComponent,
     CardComponent,
     ViewerComponent,
     LoaderComponent,
+    HamburgerButtonComponent,
   ],
   imports: [
     HttpClientModule,

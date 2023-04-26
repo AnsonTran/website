@@ -1,16 +1,15 @@
-<main class="layout">
-  <nav>
-    <ul>
-      <li *ngFor="let file of course.files">
-        <a routerLink="../{{file}}">{{file}}</a>
-      </li>
-    </ul>
-  </nav>
-  <div class="py-16">
-    <markdown
-      [src]="path"
-      (load)="onLoad($event)"
-      (error)="onError($event)">
-    </markdown>
-  </div>
+<app-side-navbar #sidenav>
+  <ul>
+    <li *ngFor="let file of course.files">
+      <a routerLink="../{{file}}">{{file}}</a>
+    </li>
+  </ul>
+</app-side-navbar> 
+<main class="layout py-8 md:py-16 duration-100">
+  <button (click)="sidenav.toggle()">test</button>
+  <markdown
+    [src]="path"
+    (load)="onLoad($event)"
+    (error)="onError($event)">
+  </markdown>
 </main>
