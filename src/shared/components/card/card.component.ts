@@ -4,9 +4,7 @@ import { Component, Input } from '@angular/core';
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss'],
-  host: {
-    'class': 'flex flex-col shadow-xl border rounded-lg hover:scale-105 delay-75 transition'
-  }
+  host: { 'class': 'flex flex-col' }
 })
 export class CardComponent {
   @Input() title: String = '';
