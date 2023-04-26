@@ -11,8 +11,7 @@ import { Component } from '@angular/core';
 })
 export class SideNavbarComponent {
   hidden:boolean = true;
-
-  toggle() {
-    this.hidden = !this.hidden;
-  }
+  toggle() { this.hidden = !this.hidden; }
+  open() { this.hidden = false; }
+  close() { this.hidden = true; }
 }
