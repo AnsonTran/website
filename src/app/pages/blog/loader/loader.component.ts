@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Observable, map } from 'rxjs';
-import { Course, COURSES } from 'notes';
+import { Course, COURSES } from 'src/assets/notes';
 
 @Component({
   selector: 'app-loader',

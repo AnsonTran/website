@@ -8,10 +8,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 // Pages
-import { HomeComponent } from './home/home.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { BlogComponent } from './blog/blog.component';
-import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './pages/home/home.component';
+import { ProjectsComponent } from './pages/projects/projects.component';
+import { BlogComponent } from './pages/blog/blog.component';
+import { AboutComponent } from './pages/about/about.component';
 
 // Shared Components
 import {
@@ -22,9 +22,9 @@ import {
 } from './components';
 
 // Components
-import { HeaderComponent } from './home/header/header.component';
-import { ViewerComponent } from './blog/viewer/viewer.component';
-import { LoaderComponent } from './blog/loader/loader.component';
+import { HeaderComponent } from './pages/home/header/header.component';
+import { ViewerComponent } from './pages/blog/viewer/viewer.component';
+import { LoaderComponent } from './pages/blog/loader/loader.component';
 
 @NgModule({
   declarations: [

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { Course, COURSES } from 'notes';
+import { Course, COURSES } from 'src/assets/notes';
 
 @Component({
   selector: 'app-blog',
