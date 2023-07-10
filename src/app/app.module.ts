@@ -14,10 +14,12 @@ import { BlogComponent } from './blog/blog.component';
 import { AboutComponent } from './about/about.component';
 
 // Shared Components
-import { NavbarComponent } from 'src/shared/components/navbar/navbar.component';
-import { SideNavbarComponent } from 'src/shared/components/side-navbar/side-navbar.component';
-import { CardComponent } from 'src/shared/components/card/card.component';
-import { HamburgerButtonComponent } from 'src/shared/components/hamburger-button/hamburger-button.component';
+import {
+  NavbarComponent,
+  SideNavbarComponent,
+  CardComponent,
+  HamburgerButtonComponent
+} from './components';
 
 // Components
 import { HeaderComponent } from './home/header/header.component';
