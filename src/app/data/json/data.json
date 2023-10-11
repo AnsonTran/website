@@ -1,17 +1,9 @@
-interface Course {
-  id: string,
-  title: string,
-  description: string,
-  image: string
-  files: string[]
-}
-
-const COURSES:Course[] = [
-  { id: "CSCC69",
-    title: "Operating Systems",
-    description: "Principles of operating systems. The operating system as a control program and as a resource allocator",
-    image: "https://images5.alphacoders.com/131/1311254.png",
-    files: [
+{ "courses" : [
+  { "id": "CSCC69",
+    "title": "Operating Systems",
+    "description": "Principles of operating systems. The operating system as a control program and as a resource allocator",
+    "image": "https://images5.alphacoders.com/131/1311254.png",
+    "files": [
       "01-Introduction.md",
       "02-Bootstrapping.md",
       "03-System Calls.md",
@@ -22,7 +14,7 @@ const COURSES:Course[] = [
       "04-Synchronization.md",
       "05.1-Non-Preemptive Scheduling.md",
       "05.2-Preemptive Scheduling.md",
-      "05-Process Shceduling.md",
+      "05-Process Scheduling.md",
       "06.1-Fixed Partitioning.md",
       "06.2-Dynamic Partitioning.md",
       "06.3-Heap Management.md",
@@ -39,9 +31,7 @@ const COURSES:Course[] = [
       "07.4-Protection.md",
       "07.5-Hard Disks.md",
       "07-File Sytems.md",
-      "08-Deadlock.md",
+      "08-Deadlock.md"
     ]
-  },
-]
-
-export { Course, COURSES }
+  }
+]}
